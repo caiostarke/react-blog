@@ -1,4 +1,4 @@
-export default function header_nav() {
+export default function Header_nav() {
   return (
     <header>
         <nav className="py-5 shadow-xl">

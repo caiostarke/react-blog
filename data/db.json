@@ -1,0 +1,31 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "How to create elegant react apps",
+      "description": "In this article you are gonna learn how to build elegant SPA react apps",
+      "body": "This is a post",
+      "date": "2022-01-01 00:00:00"
+    },
+    {
+      "id": "2",
+      "title": "How to optmize react apps",
+      "description": " In this article you are gonna learn how to optimize react apps",
+      "body": "This is a post",
+      "date": "2022-01-01 00:00:00"
+    },
+    {
+      "id": "3",
+      "title": "How to use react in production",
+      "description": "In this article you are gonna learn how to use react in production",
+      "body": "This is a post",
+      "date": "2022-01-01 00:00:00"
+    },
+    {
+      "id": "0b41"
+    },
+    {
+      "id": "f100"
+    }
+  ]
+}
