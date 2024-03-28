@@ -22,27 +22,31 @@ function App() {
     <>  
       <Nav />
 
-      <Outlet />  
+      <div className='mx-auto mt-5 md:max-w-3xl sm:max-w-2xl'>
+        <nav>
+          { posts.length ? (
+              <ul>
+                {posts.map( (post) => (
+                  
+                  <li key={post.id}> 
+                    <Posts id={post.id} title={post.title} description={post.description} />
+                  </li>
+
+                ))}
+              </ul>
+            ): 
+            <p>No posts</p>
+          }
+        </nav>
+
+        <Form method='post'>
+            <button type='submit'> Add post </button>
+        </Form>
+
+      </div>
+
+      <Outlet />
       
-      <nav>
-        { posts.length ? (
-            <ul>
-              {posts.map( (post) => (
-                
-                <li key={post.id}> 
-                  <Posts id={post.id} title={post.title} description={post.description} />
-                </li>
-
-              ))}
-            </ul>
-          ): 
-          <p>No posts</p>
-        }
-      </nav>
-
-      <Form method='post'>
-          <button type='submit'> Add post </button>
-      </Form>
 
     </>
   )
