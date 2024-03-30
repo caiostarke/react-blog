@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 
 export default function Header_nav() {
   return (
@@ -6,7 +6,10 @@ export default function Header_nav() {
         <nav className="py-5 shadow-xl">
         <ul className="flex max-w-4xl gap-5 mx-auto">
           <li>
-            <Link to={"/"}>Blog posts</Link>
+            <NavLink 
+              to={"/"}
+              className={({isActive}) => isActive ? "border-b-sky-400  border-b-8 pb-4 text-sky-500" : ""}
+            >Blog posts</NavLink>
           </li>
         </ul>
       </nav>

@@ -13,12 +13,6 @@
       "description": "In this article you are gonna learn how to optimize react apps",
       "body": "Optimizing your React applications is crucial for enhancing performance and user experience. Some tips include:\n\n1. **Virtualization**: Implement virtualized lists for large datasets using libraries like react-virtualized.\n2. **Memoization**: Utilize React's memoization techniques like `useMemo` and `memo` to prevent unnecessary re-rendering.\n3. **Code splitting**: Split your code into smaller chunks using dynamic imports and lazy-loading components.\n4. **Image optimization**: Optimize your images using tools like Webpack's image loader or services like TinyPNG.",
       "date": "2022-01-01 00:00:00"
-    },
-    {
-      "title": "How to ",
-      "description": "How to",
-      "body": "How to",
-      "id": "3"
     }
   ]
 }

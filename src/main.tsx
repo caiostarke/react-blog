@@ -10,6 +10,7 @@ import Post, { loader as postLoader } from './routes/Post/Post.tsx'
 import './index.css'
 
 import Edit, { action as editAction } from './routes/Post/edit.tsx'
+import { action as destroyAction } from './routes/Post/destroy.tsx'
 
 //
 
@@ -24,13 +25,19 @@ const router = createBrowserRouter([
     path: "/post/:postId",
     element: <Post />,
     loader: postLoader,
+    children: [
+      {
+        path: "/post/:postId/destroy",
+        action: destroyAction
+      }    
+    ]
   },
   {
     path: "/post/:postId/edit",
     element: <Edit />,
     loader: postLoader,
     action: editAction
-  }
+  },
 ])
 
 

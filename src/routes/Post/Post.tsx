@@ -1,4 +1,4 @@
-import { Link, useLoaderData } from "react-router-dom"
+import { Link, useLoaderData, Form } from "react-router-dom"
 import { getPost } from "../../data/post"
 import Nav from '../../components/header_nav/Header_nav'
 
@@ -27,8 +27,25 @@ export default function Post() {
           {post.body }
         </ReactMarkdown>
 
-        <div className="mt-5">
+
+        <div className="flex gap-2 mt-5">
           <Link to={`/post/${post.id}/edit`} className="px-5 py-2 text-white duration-150 rounded-md bg-sky-500 hover:bg-sky-600">Edit</Link>
+          
+          <Form 
+          method="post"
+          action="destroy"
+          onSubmit={(event) => {
+            if (
+              !confirm(
+                "Please confirm you want to delete this record."
+              )
+            ) {
+              event.preventDefault();
+            }
+          }}
+          > 
+            <button type="submit" className="px-5 py-2 text-white duration-150 bg-red-500 rounded-md hover:bg-red-600">Delete</button>
+          </Form>
         </div>
 
     </div>

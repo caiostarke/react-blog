@@ -87,3 +87,16 @@ export async function updatePost(id: string, postData: PostData): Promise<Post> 
         throw error;
     }
 }
+
+export async function destroyPost(id: string): Promise<void> {
+    try {
+        await fetch(`http://localhost:3000/posts/${id}`, {
+            method: "DELETE",
+        });
+
+        return;
+    } catch (error) {
+        console.error('Error: ', error);
+        throw error;
+    }
+}
