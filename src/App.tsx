@@ -1,5 +1,5 @@
 import Nav from './components/header_nav/Header_nav'
-import { Outlet, useLoaderData, Form } from 'react-router-dom'
+import { Outlet, useLoaderData, Form, Link } from 'react-router-dom'
 import { getPosts, createPost } from './data/post';
 import './index.css'
 
@@ -39,9 +39,8 @@ function App() {
           }
         </nav>
 
-        <Form method='post'>
-            <button type='submit'> Add post </button>
-        </Form>
+        <Link to='/post/create'>Add post</Link>
+
 
       </div>
 

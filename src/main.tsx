@@ -12,6 +12,7 @@ import './index.css'
 import Edit, { action as editAction } from './routes/Post/edit.tsx'
 import { action as destroyAction } from './routes/Post/destroy.tsx'
 
+import Create, {action as createAction} from './routes/Post/create.tsx'
 //
 
 const router = createBrowserRouter([
@@ -38,6 +39,11 @@ const router = createBrowserRouter([
     loader: postLoader,
     action: editAction
   },
+  {
+    path: "/post/create",
+    element: <Create />,
+    action: createAction
+  }
 ])
 
 
