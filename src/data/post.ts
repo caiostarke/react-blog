@@ -66,3 +66,24 @@ export async function getPost(id: string): Promise<Post> {
         throw error;
     }
 }
+
+export async function updatePost(id: string, postData: PostData): Promise<Post> {
+    try {
+        const response = await fetch(`http://localhost:3000/posts/${id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(postData),
+        });
+
+        if (!response.ok) {
+            throw new Error(`Error! status: ${response.status}`);
+        }
+
+        return await response.json();
+    } catch (error) {
+        console.error('Error: ', error);
+        throw error;
+    }
+}

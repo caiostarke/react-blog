@@ -2,6 +2,17 @@ import { useLoaderData, Form, redirect } from 'react-router-dom'
 
 import Nav from '../../components/header_nav/Header_nav'
 
+import { updatePost } from '../../data/post'
+
+export async function action( { request,  params }: any ) {
+    const formData = await request.formData();
+    const updates = Object.fromEntries(formData);
+    
+    await updatePost(params.postId, updates as PostData);
+        
+    return redirect(`/post/${params.postId}`);
+}
+
 export default function Edit() {
   const post = useLoaderData() as Post;
 
@@ -21,7 +32,7 @@ export default function Edit() {
                         placeholder={post.title}
                         aria-label="Post Title"
                         type="text"
-                        name="post--title"
+                        name="title"
                         />
 
                         <span className='mt-5'>Post Description</span>
@@ -30,7 +41,7 @@ export default function Edit() {
                         className='py-2 pl-2 my-2 border border-red-200 border-solid rounded-sm outline-none'
                         placeholder={post.description}
                         aria-label="Post Description"
-                        name="post--description"
+                        name="description"
                         />
                     </div>
                     
@@ -38,7 +49,7 @@ export default function Edit() {
                         <span>Post Content</span>
                         <textarea
                         className='py-2 pl-2 my-2 border border-red-200 border-solid rounded-sm outline-none'
-                        name="post--content"
+                        name="body"
                         placeholder={post.body}
                         />
                     </label>

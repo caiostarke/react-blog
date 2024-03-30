@@ -15,11 +15,10 @@
       "date": "2022-01-01 00:00:00"
     },
     {
-      "id": "3",
-      "title": "How to use react in production",
-      "description": "In this article you are gonna learn how to use react in production",
-      "body": "Using React in a production environment requires careful planning and execution. Here are some key steps to follow:\n\n1. **Build your app**: Use tools like Webpack or Parcel to bundle and minify your code for production.\n2. **CI/CD pipeline**: Automate your deployment process using continuous integration and deployment tools like Jenkins or Travis CI.\n3. **Error monitoring**: Implement error monitoring solutions such as Sentry or LogRocket to catch and fix production issues.\n4. **Performance monitoring**: Use performance monitoring tools like Lighthouse or SpeedCurve to keep track of your app's performance metrics.",
-      "date": "2022-01-01 00:00:00"
+      "title": "How to ",
+      "description": "How to",
+      "body": "How to",
+      "id": "3"
     }
   ]
 }

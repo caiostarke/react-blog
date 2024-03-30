@@ -9,7 +9,7 @@ import App, { loader as appLoader, action as appAction } from './App.tsx'
 import Post, { loader as postLoader } from './routes/Post/Post.tsx'
 import './index.css'
 
-import Edit from './routes/Post/edit.tsx'
+import Edit, { action as editAction } from './routes/Post/edit.tsx'
 
 //
 
@@ -29,6 +29,7 @@ const router = createBrowserRouter([
     path: "/post/:postId/edit",
     element: <Edit />,
     loader: postLoader,
+    action: editAction
   }
 ])
 
