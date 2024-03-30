@@ -1,4 +1,4 @@
-import { useLoaderData, Form } from 'react-router-dom'
+import { useLoaderData, Form, redirect } from 'react-router-dom'
 
 import Nav from '../../components/header_nav/Header_nav'
 
@@ -30,7 +30,6 @@ export default function Edit() {
                         className='py-2 pl-2 my-2 border border-red-200 border-solid rounded-sm outline-none'
                         placeholder={post.description}
                         aria-label="Post Description"
-                        type="text"
                         name="post--description"
                         />
                     </div>
