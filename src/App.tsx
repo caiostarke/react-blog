@@ -1,5 +1,5 @@
 import Nav from './components/header_nav/Header_nav'
-import { Outlet, useLoaderData, Form, Link } from 'react-router-dom'
+import { Outlet, useLoaderData, Link } from 'react-router-dom'
 import { getPosts, createPost } from './data/post';
 import './index.css'
 
@@ -39,7 +39,7 @@ function App() {
           }
         </nav>
 
-        <Link to='/post/create'>Add post</Link>
+        <Link to='/post/create' className='px-5 py-2 text-white duration-150 rounded-md bg-sky-500 hover:bg-sky-600'>Add post</Link>
 
 
       </div>

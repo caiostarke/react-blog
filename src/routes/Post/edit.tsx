@@ -1,4 +1,4 @@
-import { useLoaderData, Form, redirect } from 'react-router-dom'
+import { useLoaderData, Form, redirect, Link } from 'react-router-dom'
 
 import Nav from '../../components/header_nav/Header_nav'
 
@@ -56,7 +56,7 @@ export default function Edit() {
 
                     <div className='flex gap-5'>
                         <button className='px-4 py-2 text-white duration-200 bg-blue-400 border-solid rounded-md outline-none hover:bg-blue-600' type="submit">Save</button>
-                        <button type="button">Cancel</button>
+                        <Link to={`/post/${post.id}`}>Cancel</Link>
                     </div>
 
 
